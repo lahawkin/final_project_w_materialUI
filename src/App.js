@@ -1,24 +1,56 @@
 import React from 'react';
-import logo from './logo.svg';
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Typography component="h1" variant="h5">
+          New Product
+          </Typography>
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          id="ProductName"
+          label="Product is"
+          name="Product"
+          //autoComplete="email"
+          autoFocus
+        />
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="description"
+          label="Product Description"
+          type="Product description "
+          id="product description"
+        //autoComplete="current-password"
+        />
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="buyerPrice"
+          label="I would pay"
+          type="Price "
+          id="productPrice"
+        //autoComplete="current-password"
+        />
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="primary"
         >
-          Learn React
-        </a>
-      </header>
+          Save
+            </Button>
     </div>
   );
 }
