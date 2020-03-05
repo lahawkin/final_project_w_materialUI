@@ -5,11 +5,13 @@ import TextField from "@material-ui/core/TextField";
 //import "./App.css";
 import NewPost from "./newpost.js";
 import SignupForm from "./comp/sign-up.js"
+import MyNavBar from "./comp/navbar.js"
 // import SignInSide from "./oldPost";
 
 function NewProduct() {
   return (
     <div>
+      <MyNavBar />
       <NewPost />
       <SignupForm/>
     </div>
