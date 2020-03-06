@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SignUp from "./comp/sign-up";
+import SignUp from "./comp/sign-upMatUI.js";
 import NavBar from "./comp/navbar.js";
 import NewPost from "./comp/newpost.js";
 
