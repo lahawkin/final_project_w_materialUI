@@ -1,16 +1,14 @@
 import React from "react";
+import SignupForm from "./comp/sign-up.js"
 import MyNavBar from "./comp/navbar.js"
 
-
-
-
-function App() {
+function SignUp () {
   return (
     <div>
       <MyNavBar />
-      
+      <SignupForm />
     </div>
   );
 }
 
-export default App;
+export default NewProduct;
