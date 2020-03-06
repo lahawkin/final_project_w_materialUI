@@ -1,16 +1,12 @@
 import React from "react";
-import NewPost from "./comp/newpost.js/index.js";
 import SignupForm from "./comp/sign-up.js"
 import MyNavBar from "./comp/navbar.js"
 
-
-
-
-function App() {
+function SignUp () {
   return (
     <div>
       <MyNavBar />
-      
+      <SignupForm />
     </div>
   );
 }
