@@ -36,28 +36,27 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: "Title of a longer featured blog post",
+  title: "Product Name - Guitar",
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    "I love this guitar and I would love to buy it but it has to have this price",
   image: "https://source.unsplash.com/random",
-  imgText: "main image description",
-  linkText: "Continue reading…"
+  imgText: "main image description"
+  //linkText: "Continue reading…"
 };
 
 const featuredPosts = [
   {
-    title: "Featured post",
+    title: "Product Name - Fender Guitar",
     date: "Nov 12",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "Looking for a block fender jazz bass guitar. Year not older than 2007 ",
     image: "https://source.unsplash.com/random",
     imageText: "Image Text"
   },
   {
-    title: "Post title",
+    title: "Sales Offer",
     date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
+    description: "Hey Dude, I got this guitar",
     image: "https://source.unsplash.com/random",
     imageText: "Image Text"
   }
