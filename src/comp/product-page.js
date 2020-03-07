@@ -46,17 +46,18 @@ const mainFeaturedPost = {
 
 const featuredPosts = [
   {
-    title: "Product Name - Fender Guitar",
+    title: "Product Name - Fender Guitar - $1,000",
     date: "Nov 12",
     description:
-      "Looking for a block fender jazz bass guitar. Year not older than 2007 ",
+      "Looking for a black American Fender Jazz bass guitar. Year - not older than 2007 ",
     image: "https://source.unsplash.com/random",
     imageText: "Image Text"
   },
   {
     title: "Sales Offer",
     date: "Nov 11",
-    description: "Hey Dude, I got this guitar",
+    description:
+      "Hey Dude, I got this guitar but I am asking for $1,100. Let me know if you want it. ",
     image: "https://source.unsplash.com/random",
     imageText: "Image Text"
   }

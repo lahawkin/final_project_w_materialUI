@@ -11,7 +11,7 @@ import FeaturedPost from "./comp/featured-post";
 import Main from "./comp/main.js";
 import Markdown from "./comp/markdown";
 import Sidebar from "./comp/sidebar";
-import Header from "./comp/header";
+//import Header from "./comp/header";
 
 function App() {
   return navigation();
