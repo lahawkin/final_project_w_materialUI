@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignUp from "./comp/sign-upMatUI.js";
 import NavBar from "./comp/navbar.js";
 import NewPost from "./comp/newpost.js";
-import Dashboard from "./comp/Dashboard.js"; 
+import Dashboard from "./comp/Dashboard.js";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function navigation() {
       <Switch>
 
         <Route exact path={["/"]}>
+          <Dashboard />
         </Route>
 
 
@@ -30,8 +31,8 @@ function navigation() {
         <Route exact path={["/newpost"]}>
           <NewPost />
         </Route>
-        <Route exact path = {["/Dashboard"]}>
-          <Dashboard /> 
+        <Route exact path={["/Dashboard"]}>
+          <Dashboard />
         </Route>
       </Switch>
     </div>
