@@ -19,6 +19,7 @@ function navigation() {
       <Switch>
 
         <Route exact path={["/"]}>
+        <Dashboard /> 
         </Route>
 
 
@@ -31,7 +32,7 @@ function navigation() {
           <NewPost />
         </Route>
         <Route exact path = {["/Dashboard"]}>
-          <Dashboard /> 
+        <Dashboard /> 
         </Route>
       </Switch>
     </div>
