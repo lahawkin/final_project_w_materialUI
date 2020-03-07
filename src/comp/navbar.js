@@ -39,6 +39,7 @@ export default function MenuAppBar() {
   };
 
   const handleClose = () => {
+    console.log("hello");
     setAnchorEl(null);
   };
 
