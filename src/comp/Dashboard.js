@@ -106,7 +106,7 @@ export default function Album() {
                 </Grid>
                 <Grid item>
                   <Button variant="outlined" color="primary">
-                    Secondary action
+                    Make a wish come true
                   </Button>
                 </Grid>
               </Grid>
@@ -126,19 +126,19 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      HP Laptop - I pay $350.00
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
+                      I really want Rod's laptop. It must be beautifull and new!
+                      not more than 1 year old...
                     </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
-                      View
+                      Details
                     </Button>
                     <Button size="small" color="primary">
-                      Edit
+                      I sell it to you
                     </Button>
                   </CardActions>
                 </Card>
@@ -150,7 +150,7 @@ export default function Album() {
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          iBuy
         </Typography>
         <Typography
           variant="subtitle1"
@@ -158,7 +158,8 @@ export default function Album() {
           color="textSecondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Something here to inspire people want to share their wishes and make
+          people want to help others!
         </Typography>
         <Copyright />
       </footer>
