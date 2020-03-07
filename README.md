@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Our Final Project
+just git clone, npm install and go!
+check out the project tab for our to-do list n such
+
+keeping below stuff here for now, but the yarn stuff is just default.  We like npm!
+
 ## Available Scripts
 
 In the project directory, you can run:
