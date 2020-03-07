@@ -5,6 +5,13 @@ import SignUp from "./comp/sign-upMatUI.js";
 import NavBar from "./comp/navbar.js";
 import NewPost from "./comp/newpost.js";
 import Dashboard from "./comp/Dashboard.js";
+import Blog from "./comp/product-page.js";
+import MainFeaturedPost from "./comp/main-feature-post.js";
+import FeaturedPost from "./comp/featured-post";
+import Main from "./comp/main.js";
+import Markdown from "./comp/markdown";
+import Sidebar from "./comp/sidebar";
+import Header from "./comp/header";
 
 function App() {
   return navigation();
@@ -19,9 +26,9 @@ function navigation() {
         <Switch>
           <Route exact path={["/"]}></Route>
 
-        <Route exact path={["/"]}>
-          <Dashboard />
-        </Route>
+          <Route exact path={["/signup"]}>
+            <SignUp />
+          </Route>
 
           <Route exact path={["/newpost"]}>
             <NewPost />
@@ -32,17 +39,18 @@ function navigation() {
           </Route>
 
           <Route exact path={["/product-page"]}>
-          
+            <Blog />
           </Route>
 
-        <Route exact path={["/newpost"]}>
-          <NewPost />
-        </Route>
-        <Route exact path={["/Dashboard"]}>
-          <Dashboard />
-        </Route>
-      </Switch>
-    </div>
-  </Router>
-)}
+          <Route exact path={["/main-feature-post"]}>
+            <MainFeaturedPost />
+          </Route>
 
+          <Route exact path={["/featured-post"]}>
+            <FeaturedPost />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  )
+}
