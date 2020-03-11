@@ -68,6 +68,9 @@ export default function Album() {
   let history = useHistory();
   const classes = useStyles();
 
+  const handleProductPage = () => {
+    history.push("/product-page"); 
+  }
 
   const handleMakeNewPost = () => {
     history.push("/newpost");
@@ -142,7 +145,7 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" onClick={handleProductPage}>
                       Details
                     </Button>
                     <Button size="small" color="primary">
