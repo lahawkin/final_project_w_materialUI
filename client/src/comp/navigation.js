@@ -16,7 +16,9 @@ export function navigation(props) {
     <div>
       <NavBar />
       <Switch>
-        <Route exact path={["/"]}></Route>
+        <Route exact path={["/"]}>
+          <Dashboard />
+        </Route>
 
         <Route exact path={["/signup"]}>
           <SignUp />

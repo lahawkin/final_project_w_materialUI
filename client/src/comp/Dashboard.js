@@ -13,6 +13,9 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
+import { useHistory } from "react-router-dom";
+
+
 
 function Copyright() {
   return (
@@ -62,8 +65,13 @@ const useStyles = makeStyles(theme => ({
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Album() {
+  let history = useHistory();
   const classes = useStyles();
 
+
+  const handleMakeNewPost = () => {
+    history.push("/newpost");
+  }
   return (
     <React.Fragment>
       <CssBaseline />
@@ -100,7 +108,7 @@ export default function Album() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
+                  <Button variant="contained" color="primary"  onClick = {handleMakeNewPost}>
                     Post what you want buy
                   </Button>
                 </Grid>
