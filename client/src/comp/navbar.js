@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 //simport MenuIcon from "@material-ui/icons/Menu"; //removed the button on the navbar that links to other pages
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Switch from "@material-ui/core/Switch";
@@ -41,7 +41,7 @@ export default function MenuAppBar() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (button) => { 
+  const handleClose = (button) => {
     setAnchorEl(null);
   };
 
@@ -75,15 +75,18 @@ export default function MenuAppBar() {
             aria-label="menu"
           >
           </IconButton>
-          <MenuItem onClick={handleSignUp}> Sign Up
-          </MenuItem>
-
-          <MenuItem onClick={handleDashboard}> Dashboard
-          </MenuItem>
-
-          <Typography variant="h6" className={classes.title}>
-            My Products
+          <MenuItem onClick={handleSignUp}>
+            <Typography variant="h6" className={classes.title}>
+              Sign Up
           </Typography>
+          </MenuItem>
+
+          <MenuItem onClick={handleDashboard}>
+            <Typography variant="h6" className={classes.title}>
+              Dashboard
+          </Typography>
+          </MenuItem>
+
           {auth && (
             <div>
               <IconButton
