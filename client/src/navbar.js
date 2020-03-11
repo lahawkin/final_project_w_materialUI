@@ -5,8 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 //simport MenuIcon from "@material-ui/icons/Menu"; //removed the button on the navbar that links to other pages
-import { BrowserRouter as Router, Route, NavLink, useHistory } from "react-router-dom";
-import SignUp from "./sign-upMatUI.js";
+import { useHistory } from "react-router-dom";
 
 
 import AccountCircle from "@material-ui/icons/AccountCircle";

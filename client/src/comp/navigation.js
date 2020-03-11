@@ -7,6 +7,8 @@ import Dashboard from "./Dashboard.js";
 import Blog from "./product-page.js";
 import MainFeaturedPost from "./main-feature-post.js";
 import FeaturedPost from "./featured-post";
+
+
 export function navigation(props) {
   console.log("in navigation")
     console.log(props); 
