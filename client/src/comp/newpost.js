@@ -5,25 +5,33 @@ import TextField from "@material-ui/core/TextField";
 import "../App.css";
 
 class NewPost extends Component {
-  state = {
-    name: "",
-    description: "",
-    Price: "",
-    ProductImage: ""
-  };
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      description: "",
+      Price: "",
+      ProductImage: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
+  handleChange(evt) {
+    this.setState({ [evt.target.name]: evt.target.value });
+    console.log(this.state);
+  }
   handleClick = () => {
     console.log("Sign Up button clicked!");
     // this.context.location.transitionTo('login');
     //grab the values  in the inputs, save into a variable, create ajax call and pass to back end (post method)
   };
 
-  handleChange = (event, state) => {
-    console.log("state inside: ", state);
-    this.setState({
-      state: event.target.value
-    });
-  };
+  // handleChange = (event, state) => {
+  //   console.log("state inside: ", state);
+  //   this.setState({
+  //     state: event.target.value
+  //   });
+  //};
 
   handleSubmit = event => {
     event.preventDefault();
@@ -33,12 +41,12 @@ class NewPost extends Component {
       price: this.state.price,
       ProductImage: this.state.value
     };
-    // const user = {
-    //   name: this.state.name,
-    //   description: this.state.description,
-    //   Price: this.state.Price,
-    //   ProductImage: this.state.ProductImage
-    // };
+    //  const user = {
+    //    name: this.state.name,
+    //    description: this.state.description,
+    //    Price: this.state.Price,
+    //    ProductImage: this.state.ProductImage
+    //  };
 
     const axios = require("axios").default;
     axios
@@ -64,7 +72,7 @@ class NewPost extends Component {
           id="ProductName"
           label="Name"
           name="Product"
-          onChange={this.handleChange("name")}
+          onChange={this.handleChange}
           //autoComplete="email"
           autoFocus
         />
@@ -77,7 +85,7 @@ class NewPost extends Component {
           label="Description"
           type="description "
           id="product description"
-          onChange={this.handleChange("description")}
+          onChange={this.handleChange}
           //autoComplete="current-password"
         />
         <TextField
@@ -90,7 +98,7 @@ class NewPost extends Component {
           type="Price"
           id="productPrice"
           //autoComplete="current-password"
-          onChange={this.handleChange("Price")}
+          onChange={this.handleChange}
         />
 
         <TextField
@@ -103,7 +111,7 @@ class NewPost extends Component {
           name="Image"
           //autoComplete="email"
           autoFocus
-          onChange={this.handleChange("ProductImage")}
+          onChange={this.handleChange}
         />
 
         <Button
