@@ -5,6 +5,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 //simport MenuIcon from "@material-ui/icons/Menu"; //removed the button on the navbar that links to other pages
+import { useHistory } from "react-router-dom";
+
+
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -25,6 +28,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function MenuAppBar() {
+  let history = useHistory();
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -38,9 +42,18 @@ export default function MenuAppBar() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (button) => {
+    console.log("hello");
+    console.log(button);   
     setAnchorEl(null);
   };
+
+  const handleSignUp = () => {
+    history.push("/signup");
+  }
+  const handleDashboard = () => {
+    history.push("/Dashboard");
+  }
 
   return (
     <div className={classes.root}>
@@ -58,14 +71,19 @@ export default function MenuAppBar() {
       </FormGroup>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
+          <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
-          </IconButton> */}
+          </IconButton>
+          <MenuItem onClick={handleSignUp}> Sign Up
+          </MenuItem>
+
+          <MenuItem onClick={handleDashboard}> Dashboard
+          </MenuItem>
+
           <Typography variant="h6" className={classes.title}>
             My Products
           </Typography>
@@ -95,7 +113,8 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>Profile
+                </MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
             </div>
