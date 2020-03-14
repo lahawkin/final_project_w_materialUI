@@ -10,6 +10,7 @@ import FeaturedPost from "./comp/featured-post";
 import Main from "./comp/main.js";
 import Markdown from "./comp/markdown";
 import Sidebar from "./comp/sidebar";
+import Myproducts from "./comp/my-products";
 //import Header from "./comp/header";
 
 function App() {
@@ -59,6 +60,10 @@ function navigation() {
 
           <Route exact path={["/sidebar"]}>
             <Sidebar />
+          </Route>
+
+          <Route exact path={["/my-product"]}>
+            <Myproducts />
           </Route>
         </Switch>
       </div>
