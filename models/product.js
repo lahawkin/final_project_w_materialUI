@@ -1,6 +1,3 @@
-//example from previous activies in class
-
-
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
